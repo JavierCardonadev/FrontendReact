@@ -19,7 +19,7 @@ import HeaderComponent from "./components/HeaderComponent";
 import FooterComponent from "./components/FooterComponent";
 import './App.css';
 import { useAuthStore } from 'shared';
-import Home from "./pages/Home/HomeComponent.spec";
+import Home from "./pages/Home/HomeComponent";
 
 const App: React.FC = () => {
     const user = useAuthStore((state) => state.user);
