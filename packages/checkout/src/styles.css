@@ -1,0 +1,123 @@
+@tailwind utilities;
+@import "tailwindcss";
+
+.checkout {
+    padding: 25px 20px;
+
+    h1 {
+        font-weight: bold;
+        text-align: center;
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    .content-form {
+        width: 70%;
+        order: 1;
+    }
+    .table-img {
+        width: 100px;
+    }
+    .content-details {
+        margin-bottom: 20px;
+    }
+    .detail {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+    }
+    .information-additional {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .information {
+        padding: 20px;
+        max-width: 30%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        order: 2;
+    }
+    .content-information {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+    .payment {
+        padding: 10px;
+        border: 1px solid #177E5D;
+        color: black;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        margin: 20px 0;
+        max-width: 200px;
+    }
+
+    .payment:hover {
+        background-color: #177E5D;
+        color: white;
+    }
+    input {
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        border-color: #aaa9a9;
+    }
+    label {
+        margin-bottom: 5px;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@supports (container-type: inline-size) {
+    .checkout {
+        container-type: inline-size;
+    }
+
+    .container:has(.content-form) {
+        @container (max-width: 1024px) {
+            flex-direction: column !important;
+            gap: 10px;
+        }
+    }
+
+    .information {
+        @container (max-width: 1024px) {
+            max-width: 100% !important;
+            order: 1 !important;
+            margin-bottom: 20px;
+        }
+    }
+
+    .content-form {
+        @container (max-width: 1024px) {
+            width: 100% !important;
+            order: 2 !important;
+        }
+    }
+
+    .payment {
+        @container (max-width: 1024px) {
+            max-width: 100% !important;
+        }
+    }
+}

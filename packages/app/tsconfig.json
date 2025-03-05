@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "jsx": "react-jsx", // Soporte JSX (React 17+)
+    "module": "ESNext", // Entorno compatible con Jest
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "types": ["jest", "@testing-library/jest-dom", "vite/client", "vitest"], // Tipos de Jest y Testing Library
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src", "**/*.test.ts", "**/*.test.tsx"], // Incluye los tests
+  "exclude": ["node_modules", "dist"]
+}

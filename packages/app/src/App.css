@@ -1,0 +1,103 @@
+@tailwind utilities;
+@import "tailwindcss";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.login {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form {
+        width: 100%;
+        max-width: 500px;
+    }
+    input {
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        border-color: #aaa9a9;
+    }
+    .btn-login {
+        padding: 10px;
+        border: 1px solid #177E5D;
+        color: black;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        margin: 20px 0;
+    }
+    .btn-login:hover {
+        background-color: #177E5D;
+        color: white;
+    }
+}
+
+h1.title-login {
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+}
+
+.general-container {
+    padding: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.get-detail {
+    cursor: pointer;
+}
+.order-detail {
+    margin-top: 0 !important;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        max-width: 50%;
+        gap: 20px;
+    }
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.container-pages {
+    position: relative;
+    margin-top: 64px;
+    flex-grow: 1;
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    min-height: 90vh;
+}
+
+@supports (container-type: inline-size) {
+    header {
+        container-type: inline-size;
+    }
+    header span {
+        @container (max-width: 1024px) {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+  .general-container {
+    padding: 1rem;
+  }
+}

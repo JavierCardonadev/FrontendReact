@@ -1,0 +1,136 @@
+@tailwind utilities;
+@import "tailwindcss";
+
+.orders-admin {
+    padding: 20px;
+    h1 {
+        font-weight: bold;
+        text-align: center;
+        font-size: 30px;
+    }
+    .content-dashboard {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .table {
+        padding: 0 20px;
+        max-width: 80%;
+        width: 100%;
+    }
+    aside {
+        width: 100%;
+        max-width: 20%;
+        padding: 20px;
+    }
+    .menu {
+        margin-top: 20px;
+    }
+    aside li {
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+        border-bottom: 1px solid darkgrey;
+        margin-bottom: 10px;
+    }
+    aside li:hover {
+        background: #e6e9ec;
+    }
+    aside li:has(.active) {
+        background: #e6e9ec;
+    }
+    a {
+        width: 100% !important;
+        height: 100%;
+        display: block;
+    }
+    .table-products {
+        border-bottom: 1px solid darkgrey;
+        padding-bottom: 20px;
+    }
+    .ul-products {
+        max-width: 80%;
+        margin: auto;
+        padding: 10px;
+    }
+    .ul-products li{
+        align-items: center;
+        border-bottom: 1px solid darkgrey;
+        padding: 5px;
+    }
+    .head {
+        border-bottom: 1px solid darkgrey;
+        background: #e6e9ec;
+    }
+    .table-img {
+        height: 50px;
+    }
+    .body {
+        border-bottom: 1px solid darkgrey;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .products h4 {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #4b5563;
+        margin-bottom: 0.5rem;
+    }
+
+    .products ul {
+        list-style-type: disc;
+        padding-left: 1.25rem;
+    }
+
+    .products li {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9rem;
+        color: #4b5563;
+        margin-bottom: 0.5rem;
+    }
+
+}
+
+@supports (container-type: inline-size) {
+    .orders-admin {
+        container-type: inline-size;
+    }
+
+    .content-dashboard:has(.table) {
+        @container (max-width: 1024px) {
+            flex-direction: column !important;
+            gap: 10px;
+        }
+    }
+
+    .head:has(.text-center) {
+        @container (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    aside {
+        @container (max-width: 1024px) {
+            max-width: 100% !important;
+            order: 1;
+        }
+    }
+
+    .table {
+        @container (max-width: 1024px) {
+            max-width: 100% !important;
+            order: 2;
+            padding: 0 !important;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .head {
+        display: none;
+    }
+}
