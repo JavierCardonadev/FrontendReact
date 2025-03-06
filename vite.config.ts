@@ -10,5 +10,7 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
     setupFiles: './jest_dom_extension.ts',
+    exclude: ['**/*.stories.{js,jsx,ts,tsx}'],
+    include: ['src/**/*.test.{js,ts,tsx}'],
   },
 });
