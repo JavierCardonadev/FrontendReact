@@ -17,7 +17,7 @@ Este repositorio contiene una aplicación desarrollada con **React** en un entor
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/usuario/proyecto.git
+   git clone https://github.com/JavierCardonadev/FrontendReact.git
    ```
 
 2. Instala las dependencias principales del monorepo:
