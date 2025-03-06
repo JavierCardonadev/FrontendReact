@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest",
-    "lint": "eslint packages/app/src --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "",
@@ -17,8 +17,11 @@
   ],
   "dependencies": {
     "@tailwindcss/vite": "^4.0.9",
+    "@typescript-eslint/eslint-plugin": "^8.26.0",
+    "@typescript-eslint/parser": "^8.26.0",
     "autoprefixer": "^10.4.20",
     "eslint-plugin-jsdoc": "^50.6.3",
+    "eslint-plugin-react": "^7.37.4",
     "icomoon-react": "^3.0.0",
     "postcss": "^8.5.3",
     "zustand": "^5.0.3"
