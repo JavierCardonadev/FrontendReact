@@ -1,16 +1,14 @@
+import jsdoc from "eslint-plugin-jsdoc";
+
 export default [
     {
-        files: ["**/*.{js,jsx,ts,tsx}"], // Archivos que ESLint debe analizar
-        ignores: ["node_modules", "dist", "build"], // Directorios que ESLint debe ignorar
-    },
-    {
-        languageOptions: {
-            ecmaVersion: "latest", // Selecciona la versión de ECMAScript
-            sourceType: "module",  // Soporte para módulos de ECMAScript
+        files: ["*"],
+        plugins: {
+            jsdoc: jsdoc
         },
         rules: {
-            "no-unused-vars": "warn", // Ejemplo de regla
-            "no-console": "off", // Ejemplo de regla
-        },
-    },
+            "jsdoc/require-description": "error",
+            "jsdoc/check-values": "error"
+        }
+    }
 ];
