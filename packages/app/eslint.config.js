@@ -1,21 +1,16 @@
-import eslintPluginReact from "eslint-plugin-react";
-
 export default [
     {
-        files: ["**/*.{js,jsx,ts,tsx}"], // Archivos a analizar
-        ignores: ["node_modules", "dist", "build"], // Directorios ignorados
+        files: ["**/*.{js,jsx,ts,tsx}"], // Archivos que ESLint debe analizar
+        ignores: ["node_modules", "dist", "build"], // Directorios que ESLint debe ignorar
     },
     {
         languageOptions: {
-            ecmaVersion: 2021,
-            sourceType: "module",
-        },
-        plugins: {
-            react: eslintPluginReact,
+            ecmaVersion: "latest", // Selecciona la versión de ECMAScript
+            sourceType: "module",  // Soporte para módulos de ECMAScript
         },
         rules: {
-            "no-console": "warn",
-            "react/prop-types": "off",
+            "no-unused-vars": "warn", // Ejemplo de regla
+            "no-console": "off", // Ejemplo de regla
         },
     },
 ];
