@@ -1,10 +1,10 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import * as React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
+import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { BrowserRouter } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
 import { act } from 'react-dom/test-utils';
 import Cart from './CartComponent';
-import { BrowserRouter } from 'react-router-dom';
-import * as React from 'react';
 
 let cartMockState = [];
 let updateQuantityMock = vi.fn();

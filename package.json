@@ -30,7 +30,6 @@
   },
   "devDependencies": {
     "@babel/preset-env": "^7.26.9",
-    "@chromatic-com/storybook": "^3.2.5",
     "@evilmartians/lefthook": "^1.11.2",
     "@storybook/addon-essentials": "^8.6.4",
     "@storybook/addon-onboarding": "^8.6.4",
