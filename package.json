@@ -18,6 +18,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.0.9",
     "autoprefixer": "^10.4.20",
+    "eslint-plugin-jsdoc": "^50.6.3",
     "icomoon-react": "^3.0.0",
     "postcss": "^8.5.3",
     "zustand": "^5.0.3"
